@@ -6,7 +6,7 @@ export default function Home() {
     //fetching for news articles
     const [news,setNews] = useState([]);
     useEffect(() => {
-        const url = 'https://newsapi.org/v2/everything?q="New York" AND "rent increase"&sortBy=relevancy&pageSize=4&apiKey=688cd01880f44015b1d1ca5ec4816596';
+      const url ='https://newsdata.io/api/1/news?apikey=pub_3385209d6484f30cfb1b77c8bfae24bbae782&q=rent%20price%20increase';
         const fetchData = async() => {
             try {
                 const response = await fetch(url);

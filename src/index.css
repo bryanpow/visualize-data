@@ -309,7 +309,7 @@ cursor: pointer;;
   margin-bottom: 0;
 }
 #vtext p {
-  font-size: 25px;
+  font-size: 30px;
   margin-top: 0;
   color: black;
   width: 90%;
@@ -511,7 +511,9 @@ cursor: pointer;;
     width: 60%;
     font-size: 25;
   }
+
 }
+
 @media (max-width: 950px) {
 
   #dem {
@@ -532,8 +534,8 @@ cursor: pointer;;
     flex-wrap: wrap;
   }
   #vtext h1, #vtext p {
-    font-size: 40px;
-    text-align: center;
+    font-size: 30px;
+    text-align: left;
     width: 100%;
     padding:0;
     margin: 0 auto;
@@ -545,6 +547,7 @@ cursor: pointer;;
   }
 }
 @media (max-width: 800) {
+
  
   #card2 {
     width: 450px
@@ -558,20 +561,7 @@ cursor: pointer;;
     font-size: 18px;
   }
 }
-@media(max-width:2500) {
-  
-  
-  #vis1 {
-    flex-wrap: wrap;
-  }
-  #vtext h1, #vtext p {
-    font-size:25px;
-    text-align: center;
-    width: 100%;
-    padding:0;
-    margin: 0 auto;
-  }
-}
+
 @media (max-width: 900px) {
   /* #cards {
     scale:0.6
@@ -590,12 +580,23 @@ cursor: pointer;;
     margin: 0 auto;
     flex-wrap: wrap;
   }
+  #vtext {
+    padding-bottom: 0;
+  }
   #vtext h1, #vtext p {
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
-  
+    text-align: left;
     padding:0;
     margin: 0 auto;
+  }
+  #vtext p {
+    padding-top: 50px;
+    
+  }
+  #vtext {
+    height: 40vh
+
   }
   /* #card1 #card2 {
     scale: 0.8;
@@ -654,4 +655,83 @@ ul li:hover {
 }
 ul li {
   transition: all 0.2s ease-in-out;
+}
+
+
+@media (max-width: 700px) {
+  /* #cards {
+    scale:0.6
+  } */
+  #dem {
+    width: 500px;
+  }
+  .shrink {
+    width: 58%;
+    font-size: 27;
+  }
+  #card3 img {
+    width: 400px
+  }
+  #vis1 {
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  #vtext {
+    padding-bottom: 0;
+  }
+  #vtext h1, #vtext p {
+    font-size: 23px;
+  
+    text-align: left;
+    padding:0;
+    margin: 0 auto;
+  }
+  #vtext p {
+    padding-top: 50px;
+    
+  }
+  #vtext {
+    height: 32vh
+
+  }
+  /* #card1 #card2 {
+    scale: 0.8;
+    transform: translatex(-200px);
+  } */
+  #land {
+    padding-top: 50px;
+  }
+  #embark {
+    /* font-size: 25px; */
+    text-align: center;
+    width: auto;
+  }
+  #land h1 {
+    text-align: center;
+    font-size: 60px;
+  }
+  #intro {
+    justify-self: center;
+  }
+  #choosePage {
+    flex-direction: column;
+    transform: translateY(190px) translateX(10px);
+    font-size: 35px;
+    text-align: right;
+    background-color: #FFFFFF;
+    color: black;
+    z-index: 500;
+    gap: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5%;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5), 0px 0px 20px 5px rgba(255, 255, 255, 0.3);
+    display: none
+  }
+  #dropmenu {
+    font-size: '90px';
+    position: relative;
+    left: 140px
+    
+  }
 }

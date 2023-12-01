@@ -5,36 +5,7 @@ import Navbar from "./Navbar";
 export default function Home() {
     //fetching for news articles
     const [news,setNews] = useState([]);
-    useEffect(() => {
-      const url ='https://newsdata.io/api/1/news?apikey=pub_3385209d6484f30cfb1b77c8bfae24bbae782&q=rent%20price%20increase';
-        const fetchData = async() => {
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-               setNews([])
-                console.log(data);
-                const theArticles = data.articles
-                const formattedNews = theArticles.map(article => ({
-                    'author': article.author,
-                    'source': article.source.name,
-                    'picture': article.urlToImage,
-                    'link': article.url,
-                    'desc': article.description,
-                    'title': article.title
-                }));
-                  
-                    
-                setNews((prevArticle) => [...prevArticle,...formattedNews])
-                console.log(news)
-                
-             
-            } catch(error) {
-                console.log('Try again lil bro')
-            }
-        }
-        fetchData()
-    },[])
-   
+    
     return (
         <div id='home' >
             <Navbar />
@@ -113,21 +84,7 @@ export default function Home() {
             </div>
             <div id='outernews' style={{background: 'linear-gradient(to top, #001122, #000000)', paddingTop:'50px', paddingBottom: '50px' }}>
             <h1 style={{textAlign: 'center', marginBottom: '80px'}}>Related News Articles</h1>
-            <div id='news' style={{display: 'flex',  fontSize: '10px', height: '500px', width: '90%', marginLeft:'7%', gap: '20px', padding: '0', justifyItems: 'center', position: 'relative'}}>
-                 { news? (
-                    news.map((article) => (
-                        <a href={article.link} style={{color: 'white', textDecoration: 'none', flex:1}} target='_blank'><div style={{background: 'linear-gradient(to bottom, white, #f0f0f0)', height:'450px', display: 'flex', flexDirection:'column', width: '270px', paddingLeft: '20px',  boxShadow: '0 4px 8px rgba(255, 255, 255, 0.1), 0 8px 16px rgba(255, 255, 255, 0.1), 0 16px 32px rgba(255, 255, 255, 0.1)'}}  className="nycnews" key={Math.random() * -0.0005}>
-                            <img src={article.picture} style={{overflow: 'hidden', marginTop: '20px',   boxShadow: '0 15px 13px rgba(0, 0, 0, 0.2)'}} width='250vh' height='140'></img>
-                            <h3 style={{ width:'90%',fontSize:'20px', color: 'black', marginBottom:'5px'}}>{article.title}</h3>
-                            <p style={{width: '95%', fontSize: '15px', color: 'black',marginTop: '0'}}>{article.desc}</p>
-                            <p style={{color: 'lightgrey', fontSize:'15px', fontWeight:'600'}}>{article.source}</p>
-                            
-                        </div></a>
-                    ))
-                ) : (
-                    <p>Loading news...</p>
-                )}
-            </div>
+            
             </div>
             <footer id='foot' style={{backgroundColor: '#001122', textAlign: 'center', wordSpacing: '2px', paddingTop: '50px'}}><h2> Made by Bryan Ramos 2023</h2></footer>
         </div>

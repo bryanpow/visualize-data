@@ -3,7 +3,6 @@ import { MapContainer, TileLayer, Marker, ZoomControl } from 'react-leaflet';
 import { Icon } from "leaflet";
 import L from 'leaflet'
 import { CircleMarker } from "react-leaflet";
-import { Circle } from "react-leaflet";
 // import color from './Math.js'
 import Data from './data.json'
 import Navbar from "./Navbar";

@@ -80,7 +80,7 @@ export default   function Map() {
         <div id='main-app' >
             <Navbar style={{position: 'absolute', background: 'transparent', zIndex: '10002', width:'90%' }} />
          
-            <div id={styleStart} onClick={click} >
+            <div id={styleStart}  onClick={click} >
                 <div>
                 </div>
                 <div id='years'style={drop4}>

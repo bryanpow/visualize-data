@@ -5,7 +5,7 @@ import React,{useEffect,useState} from "react";
 export default function Navbar({style}) {
    
        const pages = [
-        {text: 'Home', src: '/' }, {text: 'Map', src: '/Map'}, {text: 'Sources', src: '/#how'}, {text: 'Contact', src:'/#news'}
+        {text: 'Home', src: '/' }, {text: 'Map', src: '/Map'}, {text: 'Sources', src: '/#how'}, {text: 'Contact', src:'/#contacts'}
      ]
 
     

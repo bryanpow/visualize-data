@@ -3,8 +3,23 @@ import ProjDem1 from './ProjDem1.mov'
 import Navbar from "./Navbar";
 
 export default function Home() {
-    //fetching for news articles
-    const [news,setNews] = useState([]);
+    const contacts = [
+        {
+            img: 'https://secoora.org/wp-content/uploads/sites/default/files/webfm/bottom%20block/mail_circle_WHITE.png',
+            title: 'Email',
+            p: 'ramosbusiness544@gmail.com'
+        },
+        {
+            img: 'https://static-00.iconduck.com/assets.00/github-icon-2048x1988-jzvzcf2t.png',
+            title: 'GitHub',
+            p: 'bryanpow'
+        },
+        {
+            img: 'https://static-00.iconduck.com/assets.00/linkedin-icon-512x512-a7sf08js.png',
+            title: 'LinkedIn',
+            p: 'Bryan Ramos'
+        }
+    ]
     
     return (
         <div id='home' >
@@ -82,9 +97,17 @@ export default function Home() {
                 </div>
                 </div>
             </div>
-            <div id='outernews' style={{background: 'linear-gradient(to top, #001122, #000000)', paddingTop:'50px', paddingBottom: '50px' }}>
-            <h1 style={{textAlign: 'center', marginBottom: '80px'}}>Related News Articles</h1>
-            
+            <div id='contacts' style={{background: 'linear-gradient(to top, #001122, #000000)', paddingTop:'50px', paddingBottom: '50px' }}>
+            <h1 style={{textAlign: 'center', marginBottom: '80px'}}>Contacts</h1>
+            <div id='con' style={{display: 'flex', textAlign:'center', flexWrap: 'wrap'}}>
+                {contacts.map((contact => {
+                return <div style={{ width:'300px', margin: '0 auto', borderRadius: '5%',}}>
+                     <img src={contact.img} width='60%' style={{margin: '0 auto', paddingTop:'20px'}}></img>
+                     <h1 style={{}}>{contact.title}</h1>
+                     <p style={{}}>{contact.p}</p>
+                     </div>
+                }))}
+            </div>
             </div>
             <footer id='foot' style={{backgroundColor: '#001122', textAlign: 'center', wordSpacing: '2px', paddingTop: '50px'}}><h2> Made by Bryan Ramos 2023</h2></footer>
         </div>

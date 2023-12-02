@@ -72,7 +72,7 @@ main-app {
   padding-top: 0;
   padding-bottom: 0;
   top: 70%;
-  left: 40% ;
+  left: 39% ;
   background-color: #1A1A1A;
   color: #FFFFFF;
   border-radius: 5%;
@@ -576,7 +576,9 @@ cursor: pointer;;
   #start {
     left: 30% ;
   }
-  
+  #start2 {
+    left: 30%
+  }
    /* #cards {
     scale:0.6
   } */
@@ -707,11 +709,17 @@ ul li {
   #start {
     left: 33% ;
   }
+   #start2 {
+    left: 33%
+  }
 }
 
 @media (max-width: 700px) {
   #start {
     left: 22% ;
+  }
+  #start2 {
+    left: 22%
   }
   #card3 {
     transform: translateY(10px);

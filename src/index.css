@@ -834,3 +834,16 @@ ul li {
     
   }
 }
+#years {
+inset: 0;
+margin: 0
+}
+#view {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+#anav {
+  text-decoration: none;
+  color: white
+}

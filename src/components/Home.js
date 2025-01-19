@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+
 import ProjDem1 from "../ProjDem1.mov";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
@@ -22,12 +22,15 @@ export default function Home() {
       p: "Bryan Ramos",
       href: "https://www.linkedin.com/in/bryan-ramos-174826279/",
     },
+
+
   ];
 
+  
   return (
     <div id="home">
       <Navbar />
-      <div id="land">
+      <div id="land" >
         <div id="intro">
           <h1>Welcome.</h1>
           <p id="embark">

@@ -81,6 +81,7 @@ export default function Map() {
     <div id="main-app">
       <Navbar
         style={{
+          filter: "invert(1)",
           position: "absolute",
           background: "transparent",
           zIndex: "10002",
